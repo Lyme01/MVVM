@@ -11,3 +11,15 @@ X
 (mine/src/main/module/AndroidManifest.xml,9\3\93d4e5db26894cb52487f7ff6861630d7e9cd7f3
 A
 mine/build.gradle,c\2\c293be40123306c8ed31c4b94c4bdd34a8433e09
+a
+1app/src/main/java/com/exa/mvvm/BaseApplication.kt,b\7\b7ea602ef0d7402063c79d8c778d03169f2d5c35
+>
+app/.gitignore,5\1\51e1c5d383dfaa35e0e7e5873a0a99355a86880f
+@
+app/build.gradle,f\4\f4a01d6a4fcb971362ec00a83903fd3902f52164
+[
++base/src/main/java/com/exa/base/http/Api.kt,6\7\67dcbe475d2629a56e5da9cbb4bf827b7602f2ae
+b
+2base/src/main/java/com/exa/base/http/ApiService.kt,b\c\bca80e93981bbd620232b09789e24b3e82d3833c
+e
+5app/src/main/java/com/exa/mvvm/vm/ArticleViewModel.kt,c\a\ca102cc0d8a2c40eb7a3a2b0256e24ccd1c63e05
