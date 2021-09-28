@@ -7,11 +7,14 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
 import androidx.lifecycle.ViewModelProvider
+import com.exa.base.R
+import com.gyf.immersionbar.ImmersionBar
 
 abstract class BaseVMFragment<VDB : ViewDataBinding, VM : BaseVM> : BaseKtFragment() {
     //=========================  =================================
     lateinit var ui: VDB
     lateinit var vm: VM
+    open var isDark:Boolean=false
 
     //=========================  =================================
     //=========================  =================================
@@ -31,6 +34,14 @@ abstract class BaseVMFragment<VDB : ViewDataBinding, VM : BaseVM> : BaseKtFragme
         if (::vm.isInitialized) {
             vm.onDestroy()
         }
+    }
+
+    override fun initImmersionBar() {
+        ImmersionBar.with(this)
+            .statusBarDarkFont(isDark, 0.2f)
+            .navigationBarColor(R.color.main_color)
+            .init()
+
     }
 
     override fun onCreateRootView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {

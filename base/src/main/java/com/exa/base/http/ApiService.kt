@@ -1,7 +1,6 @@
 package com.exa.base.http
 
 import com.exa.base.BaseBean.ArticleBean
-import com.exa.base.BaseBean.BaseResp
 import com.exa.base.BaseBean.DataX
 import retrofit2.http.GET
 import retrofit2.http.Path
@@ -21,7 +20,7 @@ interface ApiService {
 //    @GET("article/top/json/")
 //    suspend fun getTopArticle(): BaseResp<List<ArticleBean>>
 
-    @GET("article/list/{page}/json")
-    suspend fun getArticleList(@Path("page") page: Int = 0):BaseResp<ArticleBean<List<DataX>>>
+//    @GET("article/list/{page}/json")
+//    suspend fun getArticleList(@Path("page") page: Int = 0):BaseResp<ArticleBean<List<DataX>>>
 
 }

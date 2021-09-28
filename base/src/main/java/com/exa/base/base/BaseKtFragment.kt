@@ -7,8 +7,10 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentTransaction
+import com.gyf.immersionbar.components.SimpleImmersionFragment
+import com.gyf.immersionbar.components.SimpleImmersionOwner
 
-abstract class BaseKtFragment : Fragment(), ICreate {
+abstract class BaseKtFragment : SimpleImmersionFragment(), ICreate {
   //=========================  =================================
   abstract var mLayoutId: Int
   //=========================  =================================

@@ -15,20 +15,20 @@ import kotlinx.coroutines.launch
  * @Describe
  */
 class ArticleViewModel :ViewModel() {
-    private val _articleListData = MutableLiveData<List<DataX>>()
-    //保证外部只能观察此数据，不同通过setValue修改 model调用articleListData拿到网络请求数据交个观察者，但是不能修改
-    val articleListData: LiveData<List<DataX>> = _articleListData
-
-    private val _errorMsg = MutableLiveData<String?>()
-    val errorMsg: LiveData<String?> = _errorMsg
-
-    fun fetch(page:Int){
-        viewModelScope.launch {
-            var result = Api.getInstance().get().getArticleList(page)
-            //请求到的数据用livedata包裹
-            _articleListData.value = result.data.datas!!
-        }
-
-
-    }
+//    private val _articleListData = MutableLiveData<List<DataX>>()
+//    //保证外部只能观察此数据，不同通过setValue修改 model调用articleListData拿到网络请求数据交个观察者，但是不能修改
+//    val articleListData: LiveData<List<DataX>> = _articleListData
+//
+//    private val _errorMsg = MutableLiveData<String?>()
+//    val errorMsg: LiveData<String?> = _errorMsg
+//
+//    fun fetch(page:Int){
+//        viewModelScope.launch {
+//            var result = Api.getInstance().get().getArticleList(page)
+//            //请求到的数据用livedata包裹
+//            _articleListData.value = result.data.datas!!
+//        }
+//
+//
+//    }
 }

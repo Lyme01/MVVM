@@ -1,6 +1,5 @@
 package com.exa.main.vm
 
-
 import androidx.lifecycle.viewModelScope
 import com.exa.base.base.BaseVM
 import com.exa.base.http.StateLiveData
@@ -8,13 +7,8 @@ import com.exa.main.bean.WxArticleBean
 import com.exa.main.http.WxArticleRepository
 import kotlinx.coroutines.launch
 
+class MainViewModel : BaseVM() {
 
-/**
- * @Author yangtianfu
- * @CreateTime 2020/4/5 20:24
- * @Describe
- */
-class ArticleViewModel :BaseVM() {
     private val repository by lazy { WxArticleRepository() }
 
     val wxArticleLiveData = StateLiveData<List<WxArticleBean>>()

@@ -14,6 +14,8 @@ import java.util.ArrayList
 
 class MainActivity(override var mLayoutId: Int=R.layout.activity_main) :
     BaseDBActivity<ActivityMainBinding>() ,BottomNavView.OnBottomViewItemSelectedListener{
+    override var isDark: Boolean=false
+
     private var fragmentList: List<Fragment>? = null
     private var mTitleList: Array<String>?=null
     private var mSelectedIcon: IntArray?=null
